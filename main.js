@@ -38,13 +38,13 @@ Kv - количество рабочих мест
 
 */
 
-
 let random = (min, max) => {
   return Math.floor(Math.random() * (max + 1 - min) + min);
 }
 
 let calcKpr = (p, y) => {
   switch (p) {
+		// уравнения трендов
     case 0: return 147.2 * y - 296363;
     case 1: return 49.47 * y - 99406;
     case 2: return 513.51 * y - 1032845.69;
@@ -55,6 +55,7 @@ let calcKpr = (p, y) => {
 
 let calcKpnr = (p, y) => {
   switch (p) {
+		// уравнения трендов
     case 0: return -33.554 * y + 68462;
     case 1: return -159.08 * y + 321093;
     case 2: return -985.65 * y + 1987814.63;
@@ -72,7 +73,7 @@ let calcA = Kv => {
 }
 
 let calcKv5 = (R, Kpr, Kpnr) => {
-  return 689.0859843 + 342.8583234 * R + 0.283865251 * Kpr + (-0.032037046 * Kpnr);
+  return 689.0859843 + 342.8583234 * R + 0.283865251 * Kpr + (-0.032037046 * Kpnr); // уравнение множественной регрессии
 }
 
 let profsData = [];
@@ -84,9 +85,9 @@ for (let p = 0; p < profs.length; p++) {
 for (let y = yearBegin; y <= yearEnd; y++) {
   for (let p = 0; p < profsData.length; p++) {
     let kk = K / 4;
-    let Tp = random(kk / 2, kk);
+    let Tp = random(kk / 2, kk); // основано на реальных событиях за 2013-2016 года
     let Tnp = kk - Tp;
-    let Kv = Tp - random(Tp / 4, Tp / 2);
+    let Kv = Tp - random(Tp / 4, Tp / 2); // тоже основано на реальных событиях за 2013-2016 года
 
     profsData[p].years[y] = {
       Tp,
