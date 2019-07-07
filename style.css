@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 16px 'Roboto', sans-serif;
+}
+
+body {
+  background: rgba(1,77,101,.2);
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  background: #fff;
+}
+
+.prof-hello {
+  padding: 30px;
+}
+
+.prof-hello p {
+  font-size: 20px;
+}
+
+.prof-title {
+  padding: 30px;
+  background: rgba(1,77,101,.1);
+}
+
+.prof-table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.prof-table tr td {
+  padding: 30px;
+  vertical-align: top;
+}
+
+.prof-table tr td p {
+  text-align: center;
+}
+
+.prof-table tr td > p:first-child {
+  padding-bottom: 15px;
+}
+
+.prof-teachers-stat {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.prof-teachers-stat > div {
+  padding: 15px 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.prof-teachers-stat-0 p:first-child {
+  font-size: 24px;
+}
+
+.prof-teachers-stat-1,
+.prof-teachers-stat-1 span {
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.prof-teachers-stat-1 .bad {
+  color: #E53935;
+}
+
+.prof-teachers-stat-1 .good {
+  color: #43A047;
+}
+
+.prof-teachers-stat-none {
+  text-align: center;
+  padding: 15px 0;
+}
